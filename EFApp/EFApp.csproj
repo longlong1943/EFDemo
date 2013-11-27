@@ -49,12 +49,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201311271455055_AddUser.cs" />
+    <Compile Include="Migrations\201311271455055_AddUser.Designer.cs">
+      <DependentUpon>201311271455055_AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311271506188_AddGender.cs" />
+    <Compile Include="Migrations\201311271506188_AddGender.Designer.cs">
+      <DependentUpon>201311271506188_AddGender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311271510564_ChangeDisplayName.cs" />
+    <Compile Include="Migrations\201311271510564_ChangeDisplayName.Designer.cs">
+      <DependentUpon>201311271510564_ChangeDisplayName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Blog.cs" />
+    <Compile Include="Models\BloggingContext.cs" />
+    <Compile Include="Models\Mapping\BlogMap.cs" />
+    <Compile Include="Models\Mapping\PostMap.cs" />
+    <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201311271455055_AddUser.resx">
+      <DependentUpon>201311271455055_AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311271506188_AddGender.resx">
+      <DependentUpon>201311271506188_AddGender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311271510564_ChangeDisplayName.resx">
+      <DependentUpon>201311271510564_ChangeDisplayName.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
